@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>index | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Project List Smart Bridge Micro Open HMD Quest support Project North Star AirCraft  Smart Bridge MicroGoal : create a plateform for robotic focusing on small drone and being fully open source Specific">
+<meta property="og:type" content="article">
+<meta property="og:title" content="index">
+<meta property="og:url" content="http://yoursite.com/2020/02/25/index/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Project List Smart Bridge Micro Open HMD Quest support Project North Star AirCraft  Smart Bridge MicroGoal : create a plateform for robotic focusing on small drone and being fully open source Specific">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-25T13:16:16.167Z">
+<meta property="article:modified_time" content="2020-02-25T13:16:16.167Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-index" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/25/index/" class="article-date">
+  <time datetime="2020-02-25T13:16:16.167Z" itemprop="datePublished">2020-02-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      index
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Project-List"><a href="#Project-List" class="headerlink" title="Project List"></a>Project List</h3><ul>
+<li>Smart Bridge Micro</li>
+<li>Open HMD Quest support</li>
+<li>Project North Star</li>
+<li>AirCraft</li>
+</ul>
+<h2 id="Smart-Bridge-Micro"><a href="#Smart-Bridge-Micro" class="headerlink" title="Smart Bridge Micro"></a>Smart Bridge Micro</h2><p>Goal : create a plateform for robotic focusing on small drone and being fully open source</p>
+<h3 id="Specification-of-the-Smart-Bridge-Micro"><a href="#Specification-of-the-Smart-Bridge-Micro" class="headerlink" title="Specification of the Smart Bridge Micro"></a>Specification of the Smart Bridge Micro</h3><ul>
+<li>Very small (smaller than a pi zero)</li>
+<li>V3S for video streaming / “Heavy” operating system</li>
+<li>ESP32 for wifi raw packet / realtime operating system</li>
+<li>IMU</li>
+<li>A lot of extension port</li>
+<li>1s / 2s battery support</li>
+<li>Support cheap camera (OV5640)</li>
+</ul>
+<h2 id="Open-HMD-Quest-support"><a href="#Open-HMD-Quest-support" class="headerlink" title="Open HMD Quest support"></a>Open HMD Quest support</h2><p>Goal : provide support for the Oculus Quest through Open HMD on Linux (stream video from linux to the headset and input (position, hand, headset information) from the Quest to the PC)</p>
+<p>Actually Open HMD mostly provide positional/hand tracking and information about headset (display size, resolution, distortion matrix).<br>The image is created by the library’s user via OpenGL for instance (the headset is seen exactly like a display by the operating system).<br>To get a working Quest there is 2 step :</p>
+<ul>
+<li>Implement video streaming through Gstreamer</li>
+<li>Send all input from headset</li>
+</ul>
+<p>Sending input is way simpler than streaming video, since the headset manufacturer already provide easy access to example to access everything and the flow of data is pretty small. In contrary, video must have the lowest latency while being carried by a possibly noisy network.</p>
+<p>No repo yet</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Understand Open HMD internal</li>
+<li><input disabled="" type="checkbox"> Find how to use Gstreamer to stream the video</li>
+<li><input disabled="" type="checkbox"> Implement positional/hand tracking</li>
+<li><input disabled="" type="checkbox"> Create code example for Python/C</li>
+<li><input disabled="" type="checkbox"> Document how much work must be done to port other standalone headset</li>
+</ul>
+<h2 id="North-Star-Standalone"><a href="#North-Star-Standalone" class="headerlink" title="North Star Standalone"></a>North Star Standalone</h2><p>Goal : Create a motherboard for North Star Project allowing standalone operation, positional tracking and 5G</p>
+<p><a href="https://github.com/ciborg971/ProjectNorthStar/blob/standalone/Electronics/Hardware/Standalone%20Board/" target="_blank" rel="noopener">Repo link</a></p>
+<h3 id="Specification-of-Standalone-Board-for-NorthStar"><a href="#Specification-of-Standalone-Board-for-NorthStar" class="headerlink" title="Specification of Standalone Board for NorthStar :"></a>Specification of Standalone Board for NorthStar :</h3><ul>
+<li>Based on SOM-RK3399 from friendlyarm</li>
+<li>Soc RK3399 6 core</li>
+<li>Ram 2GB</li>
+<li>Rom 16GB emmc</li>
+<li>Wifi a/b/g/n/ac</li>
+<li>Bluetooth 4.1</li>
+<li>2x USB3.0</li>
+<li>1x USB2.0</li>
+<li>MPCIE (USB2.0 + PCIE + I2C) with sim holder, can be used for additional storage or 4G/5G module</li>
+<li>SD Card holder+ Debug UART (UART2_DBG)</li>
+<li>Support 2x H381DLN01.0 Display (1080 x 1200 90hz Amoled display)</li>
+<li>RTC</li>
+<li><em>WARNING</em> no current limiter, 5 Volt 5 A shared between all USB2.0, USB3.0 and MPCIE port</li>
+<li>GPIO Header with UART4, 3.3V, 5V, I2C3, GPIO1_C2, GPIO1_C6, GPIO1_C7, GPIO1_D0</li>
+<li>PWR_IN Header with<br>   +Batt(7-17V), +12V, I2C1, GPIO1_A1, GPIO1_A3 - expect a power supply module that can be :    <ul>
+<li>directly 12 V (Connect Both +Batt and +12V to 12V and ignore other pins)    </li>
+<li>USB C with FUSB302 IC    </li>
+<li>Battery (need a BMS, regulator and ina219 as fuel gauge)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Push repo in public</li>
+<li><input disabled="" type="checkbox"> Review PCB</li>
+<li><input disabled="" type="checkbox"> Make power module</li>
+<li><input disabled="" type="checkbox"> Design and 3D Print a casing</li>
+<li><input disabled="" type="checkbox"> Write more doc</li>
+</ul>
+<h2 id="AirCraft"><a href="#AirCraft" class="headerlink" title="AirCraft"></a>AirCraft</h2><p>Goal : Create tool and documentation about creating an aircraft from simulation, respecting the laws to mechanic/electronic and software</p>
+<h3 id="Quickie-Q3"><a href="#Quickie-Q3" class="headerlink" title="Quickie Q3"></a>Quickie Q3</h3><p>Goal : Create and document the build of a Quickie Q1 but electric and with modern tooling !</p>
+<p>Example of an electric Quickie without documentation</p>
+<p><strong>Youtube</strong> <a href="https://youtu.be/i1_gLLWXy_M" target="_blank" rel="noopener">Electric Quickie</a></p>
+<iframe width='560' height='315' src='https://www.youtube.com/embed/i1_gLLWXy_M'></iframe>
+
+
+<ul>
+<li><input disabled="" type="checkbox"> Get the ultralight license (ULM in France)</li>
+<li><input disabled="" type="checkbox"> Design a mecanicaly accurate model in freecad</li>
+<li><input disabled="" type="checkbox"> Contribute to freecad to do everything related to mathematics (mecanical testing, wing loading, wind turbine …)</li>
+<li><input disabled="" type="checkbox"> Choose / design electronic</li>
+<li><input disabled="" type="checkbox"> Create a technical report and contact OSAC</li>
+<li><input disabled="" type="checkbox"> Choose / create tools</li>
+<li><input disabled="" type="checkbox"> Build community</li>
+<li><input disabled="" type="checkbox"> Get certified OSHW</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/25/index/" data-id="ck71wysso0001zpua93stallx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/25/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/25/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/25/index/">index</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
